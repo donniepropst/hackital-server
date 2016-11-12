@@ -4,7 +4,6 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     area: DataTypes.STRING,
     block: DataTypes.STRING,
-    direction: DataTypes.STRING,
     streetName: DataTypes.STRING,
     side: DataTypes.STRING,
     restrictions: DataTypes.TEXT,

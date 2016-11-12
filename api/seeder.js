@@ -14,8 +14,11 @@ function seed(){
                        street.area = element[8];
                        street.name = element[9];
                        street.block = element[10];
-                       street.direction = element[11];
-                       street.streetName = element[12] + '' + element[13];
+                       if(element[11]){
+                            street.streetName = element[11] + element[12] + '' + element[13];
+                       }else{
+                            street.streetName = element[12] + '' + element[13];
+                       }
                        street.side = element[14];
                        street.restrictions = element[15];
                        streetInitialization.create(street);
