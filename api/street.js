@@ -29,7 +29,7 @@ module.exports = {
              var blockNumber = JSON.parse(body).results[0].address_components[0].short_name;
              Street.findAll({where: {streetName: name}}).then(function(streets){
                  if(streets){
-                     res.send({success: true, data: streets, streetNumber: blockNumber});
+                     res.send({success: true, data: streets, streetNumber: blockNumber, streetName: name});
                  }else{
                      res.send({success: false, message: 'No data for your street'});
                  }
