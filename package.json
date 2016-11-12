@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"bower install && node app.js",
+    "start": "bower install && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Donnie Propst, Kiersten Franklin",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.15.2",
+    "bower": "1.8.0",
     "express": "4.14.0",
     "mysql": "2.12.0",
     "node-env-file": "0.1.8",
