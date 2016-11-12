@@ -1,0 +1,27 @@
+{
+  "name": "Hackital",
+  "main": "app.js",
+  "authors": [
+    "Donnie Propst <donniepropst@gmail.com>",
+    "Kiersten Franklin <kierstenfranklin@gmail.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mobile"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "angular-moment": "^1.0.0",
+    "angular-animate": "^1.5.8"
+  }
+}
