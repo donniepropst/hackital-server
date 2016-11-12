@@ -26,7 +26,7 @@ module.exports = {
         request.get({url: 'https://maps.googleapis.com/maps/api/geocode/json', qs:query}, function (error, response, body) {
           if (!error && response.statusCode == 200) {
              var name = JSON.parse(body).results[0].address_components[1].short_name + '.';
-             var blockNumber = JSON.parse(body).results[0].address_components[1].short_name;
+             var blockNumber = JSON.parse(body).results[0].address_components[0].short_name;
              Street.findAll({where: {streetName: name}}).then(function(streets){
                  if(streets){
                      res.send({success: true, data: streets, streetNumber: blockNumber});
