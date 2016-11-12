@@ -12,7 +12,7 @@ function init(app){
     }).catch(function(error){
         console.log('error', error);
     });
-    
+
     seeder.seed();
 
 
@@ -22,7 +22,7 @@ function init(app){
 }
 
 function openRoutes(){
-    api.get('/street/find', street.find);
+    api.get('/street/location', street.findAddress);
 }
 
 module.exports.init = init;
