@@ -37,7 +37,7 @@ module.exports = {
                         }
                      });
                      if(candidates.length == 0){
-                         res.send({success: false, message: 'No data for your street'});
+                         res.send({success: false, message: 'No data for your street',streetNumber: blockNumber, streetName: name});
                      }else{
                         res.send({success: true, rules: candidates, streetNumber: blockNumber, streetName: name});
                      }
