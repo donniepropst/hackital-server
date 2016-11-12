@@ -29,7 +29,18 @@ module.exports = {
              var blockNumber = JSON.parse(body).results[0].address_components[0].short_name;
              Street.findAll({where: {streetName: name}}).then(function(streets){
                  if(streets){
-                     res.send({success: true, rules: streets, streetNumber: blockNumber, streetName: name});
+                     var candidates = [];
+                     streets.map(function(element){
+                        var number = element.block;
+                        if(blockNumber > number - 100 && blockNumber < number + 100){
+                            candidates = candidates.push(element);
+                        }
+                     });
+                     if(candidates.length == 0){
+                         res.send({success: false, message: 'No data for your street'});
+                     }else{
+                        res.send({success: true, rules: candidates, streetNumber: blockNumber, streetName: name});
+                     }
                  }else{
                      res.send({success: false, message: 'No data for your street'});
                  }
