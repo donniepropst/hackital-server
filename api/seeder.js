@@ -15,7 +15,7 @@ function seed(){
                        street.name = element[9];
                        street.block = element[10];
                        if(element[11]){
-                            street.streetName = element[11] + element[12] + '' + element[13];
+                            street.streetName = element[11] + ' '+ element[12] + '' + element[13];
                        }else{
                             street.streetName = element[12] + '' + element[13];
                        }
