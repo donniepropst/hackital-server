@@ -2,8 +2,8 @@
 module.exports = function(sequelize, DataTypes) {
   var Street = sequelize.define('Street', {
     name: DataTypes.STRING,
-    area: DataTypes.INTEGER,
-    block: DataTypes.INTEGER,
+    area: DataTypes.STRING,
+    block: DataTypes.STRING,
     direction: DataTypes.STRING,
     streetName: DataTypes.STRING,
     side: DataTypes.STRING,
